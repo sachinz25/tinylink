@@ -1,19 +1,20 @@
-const express=require('express');
-const router=express.Router();
-const {nanoid}=require('nanoid');
-const Url=require('../models/Url');
+const express = require('express');
+const router = express.Router();
+const { nanoid } = require('nanoid');
+const Url = require('../models/Url');
 const PORT = process.env.PORT || 5000;
 
-//POST /api/shorten
-router.post('/shorten',async(req,res)=>{
-    const{originalUrl,customAlias}=req.body;
+// POST /api/shorten
+router.post('/', async (req, res) => {
+    const { originalUrl, customAlias } = req.body;
 
-    if(!originalUrl){
-        return res.status(400).json({message:'orginal URL is required'});
+    if (!originalUrl) {
+        return res.status(400).json({ message: 'Original URL is required' });
     }
 
-    try{
-        const newUrl=new Url({
+    try {
+        const shortId = customAlias || nanoid(8); // Generate shortId or use customAlias
+        const newUrl = new Url({
             originalUrl,
             shortId,
         });
@@ -24,9 +25,10 @@ router.post('/shorten',async(req,res)=>{
             message: 'Short URL created',
             shortUrl: `http://localhost:${PORT}/${shortId}`,
         });
-    }catch(err){
-        return res.status(500).json({message:'Server error',error:err.message});
+    } catch (err) {
+        return res.status(500).json({ message: 'Server error', error: err.message });
     }
 });
 
-module.export=router;
+// Fix the export statement
+module.exports = router;
