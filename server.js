@@ -9,7 +9,13 @@ const PORT = process.env.PORT || 5000;
 
 //middleware: cors=>backend-frontend connection maker
 
-app.use(cors());
+const corsOptions = {
+    origin: '*', // allow all origins (for testing) — later we can restrict to Vercel domain
+    methods: 'GET,POST',
+  };
+  app.use(cors(corsOptions));
+
+  
 app.use(express.json()); //to parse json data in post request
 
 const urlRoutes = require('./routes/urlRoutes');
