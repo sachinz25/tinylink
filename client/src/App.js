@@ -55,9 +55,17 @@ function App() {
       </form>
 
       {shortUrl && (
-        <p>
-          ✅ Short URL: <a href={shortUrl} target="_blank" rel="noopener noreferrer">{shortUrl}</a>
-        </p>
+        <div>
+          <p>
+            Short URL: <a href={shortUrl} target="_blank" rel="noopener noreferrer">{shortUrl}</a>
+          </p>
+          <button onClick={() => {
+            navigator.clipboard.writeText(shortUrl);
+            alert("🔗 Copied to clipboard!");
+          }}>
+            Copy
+          </button>
+        </div>
       )}
 
       {error && <p style={{ color: 'red' }}>❌ {error}</p>}
