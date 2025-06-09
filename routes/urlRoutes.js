@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
 
         return res.status(201).json({
             message: 'Short URL created',
-            shortUrl: `http://localhost:${PORT}/${shortId}`,
+            shortUrl: `https://tinylink-r2yr.onrender.com/${shortId}`,
         });
     } catch (err) {
         return res.status(500).json({ message: 'Server error', error: err.message });
