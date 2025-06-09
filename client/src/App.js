@@ -14,7 +14,7 @@ function App() {
     setShortUrl('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/shorten', {
+      const response = await fetch('https://tinylink-r2yr.onrender.com/api/shorten', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
