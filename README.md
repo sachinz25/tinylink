@@ -60,5 +60,11 @@ cd client
 npm install 
 npm start
 ```
+## 📸 Screenshots
 
+<div>
+    <img src="./screenshots/user_alias.png" alt="user" style="width: 30%;">
+    <img src="./screenshots/auto_alias.png" alt="auto" style="width: 30%;">
+</div>
+---
 
