@@ -3,7 +3,7 @@
 It is a full-stack url shortner app using nodejs which lets user generate short links with custom aliases. 
 Built with **MERN stack** and deployed using **Render(backend)** and **Vercel(frontend)**.
 
-Live Demo: [visit TinyLink](https://tinylink-one.vercel.app/)
+Live Demo: [visit TinyLink](https://tinylink-virid.vercel.app/)
  ---
  
  ## Folder Structure:
