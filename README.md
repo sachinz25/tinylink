@@ -4,6 +4,10 @@ It is a full-stack url shortner app using nodejs which lets user generate short 
 Built with **MERN stack** and deployed using **Render(backend)** and **Vercel(frontend)**.
 
 Live Demo: [visit TinyLink](https://tinylink-virid.vercel.app/)
+```
+Note: For first time it will take time for minute as it will install all the necessary modules and libraries in ongoing instance (server).
+```
+
  ---
  
  ## Folder Structure:
