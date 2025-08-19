@@ -3,6 +3,10 @@
 It is a full-stack url shortner app using nodejs which lets user generate short links with custom aliases. 
 Built with **MERN stack** and deployed using **Render(backend)** and **Vercel(frontend)**.
 
+**Note:**  
+- The `main` branch is for offline (localhost) deployment.  
+- The `live` branch is used for the demo deployment on Vercel. 
+
 Live Demo: [visit TinyLink](https://tinylink-virid.vercel.app/)
 ```
 Note: For first time it will take time for minute as it will install all the necessary modules and libraries in ongoing instance (server).
